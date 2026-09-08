@@ -9,7 +9,7 @@ export default async function handler(req, res) {
   const token = '8870506499:AAGuyBYGS59EfCT0gm6fVIGxERjUzRZLZcU';
   
   // Массив Chat ID. Вставь ID помощника вместо 'ID_ПОМОЩНИКА'
-  const chatIds = ['237343250', 'ID_ПОМОЩНИКА'];
+  const chatIds = ['237343250', '562975355'];
 
   const text = `🔥 <b>Нова заявка: ${source}</b>\n\n<b>Ім'я:</b> ${name}\n<b>Контакт:</b> ${contact}\n<b>Послуга:</b> ${service || 'Не вказано'}\n<b>Задача:</b> ${task || 'Немає'}`;
 
