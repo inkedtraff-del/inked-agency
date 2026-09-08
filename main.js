@@ -1,12 +1,30 @@
 const WEBHOOK_URL = '/api/submit'; 
 
 function setLang(lang) {
-  document.documentElement.setAttribute('lang', lang);
+  // Для корректной работы HTML-тега
+  const htmlLang = lang === 'ua' ? 'uk' : lang;
+  document.documentElement.setAttribute('lang', htmlLang);
+  
+  // Обновляем классы активной кнопки
   document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-  document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
-  localStorage.setItem('inked_lang', lang);
+  const activeBtn = document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`) || document.querySelector(`.lang-btn[onclick="setLang('${htmlLang}')"]`);
+  if (activeBtn) activeBtn.classList.add('active');
+  
+  localStorage.setItem('inked_lang', htmlLang);
 }
-const savedLang = localStorage.getItem('inked_lang') || 'uk';
+
+// Новая функция: читаем URL и ищем там нужный язык
+function getLangFromUrl() {
+  const url = window.location.href.toLowerCase();
+  if (url.includes('/ru') || url.includes('?lang=ru') || url.includes('#ru')) return 'ru';
+  if (url.includes('/en') || url.includes('?lang=en') || url.includes('#en')) return 'en';
+  if (url.includes('/ua') || url.includes('/uk') || url.includes('?lang=ua') || url.includes('#ua')) return 'uk';
+  return null;
+}
+
+// Сначала проверяем URL. Если там пусто — берем из памяти браузера. Если и там пусто — ставим 'uk'
+const urlLang = getLangFromUrl();
+const savedLang = urlLang || localStorage.getItem('inked_lang') || 'uk';
 setLang(savedLang);
 
 (() => {
@@ -58,7 +76,6 @@ setLang(savedLang);
     if(plan){
       if(task) task.value = 'Цікавить пакет: ' + plan + '\n\n';
       
-      // Подклеиваем цены для Телеграма в зависимости от пакета
       let planDetails = plan;
       if (plan === 'Launch') planDetails = 'Launch ($500+)';
       if (plan === 'Growth') planDetails = 'Growth ($1000+)';

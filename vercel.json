@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/ua", "destination": "/" },
+    { "source": "/ru", "destination": "/" },
+    { "source": "/en", "destination": "/" }
+  ]
+}
