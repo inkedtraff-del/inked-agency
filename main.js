@@ -1,7 +1,4 @@
-// --- БЕЗОПАСНАЯ ОТПРАВКА ДАННЫХ ---
-// Укажи здесь URL своего вебхука (Make.com, Formspree, или свой бэкенд на Vercel/Netlify)
 const WEBHOOK_URL = '/api/submit'; 
-// ---------------------------------
 
 function setLang(lang) {
   document.documentElement.setAttribute('lang', lang);
@@ -54,9 +51,23 @@ setLang(savedLang);
     modal.classList.add('open');
     modal.setAttribute('aria-hidden','false');
     document.body.style.overflow='hidden';
+    
+    const task = modal.querySelector('textarea');
+    const modalForm = document.getElementById('modalForm');
+    
     if(plan){
-      const task = modal.querySelector('textarea');
-      if(task) task.value = 'Цікавить пакет / Интересует пакет: ' + plan + '\n';
+      if(task) task.value = 'Цікавить пакет: ' + plan + '\n\n';
+      
+      // Подклеиваем цены для Телеграма в зависимости от пакета
+      let planDetails = plan;
+      if (plan === 'Launch') planDetails = 'Launch ($500+)';
+      if (plan === 'Growth') planDetails = 'Growth ($1000+)';
+      if (plan === 'Scale') planDetails = 'Scale ($1500+)';
+
+      modalForm.dataset.source = 'ЗАПИТ ПАКЕТУ: ' + planDetails;
+    } else {
+      if(task) task.value = '';
+      modalForm.dataset.source = 'ШВИДКИЙ ЗАПИТ (ПОП-АП)';
     }
   }
   
@@ -74,7 +85,6 @@ setLang(savedLang);
 
   window.addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 20), {passive:true});
 
-  // Логика работы слайдеров в кейсах
   document.querySelectorAll('[data-slider="true"]').forEach(slider => {
     const track = slider.querySelector('.slider-track');
     const prev = slider.querySelector('.slider-prev');
@@ -97,7 +107,6 @@ setLang(savedLang);
     });
   });
 
-  // Безопасная отправка формы
   async function submitSecurely(data, form, noticeId) {
     const btn = form.querySelector('button[type="submit"]');
     const notice = document.getElementById(noticeId);
@@ -120,39 +129,38 @@ setLang(savedLang);
         form.reset();
       } else {
         notice.classList.add('show', 'error');
-        notice.innerHTML = 'Настройте WEBHOOK_URL в JS коде.';
+        notice.innerHTML = 'Помилка на сервері.';
       }
     } catch (error) {
       notice.classList.add('show', 'error');
-      notice.innerHTML = 'Сетевая ошибка или отсутствует бэкенд.';
+      notice.innerHTML = 'Помилка мережі.';
     } finally {
       btn.innerHTML = originalText;
       btn.disabled = false;
     }
   }
 
-  // Обработчик основной формы "Поговоримо"
   document.getElementById('leadForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const fd = new FormData(this);
     const data = {
-      source: 'Головна форма',
+      source: 'ПОВНА ФОРМА (ФУТЕР)',
       name: fd.get('name'),
       contact: fd.get('contact'),
-      service: fd.get('service') || 'Не обрано',
+      service: fd.get('service') || '—',
       task: fd.get('task')
     };
     submitSecurely(data, this, 'notice');
   });
 
-  // Обработчик формы в модалке "Обговорити пакет"
   document.getElementById('modalForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const fd = new FormData(this);
     const data = {
-      source: 'Модалка (Пакет)',
+      source: this.dataset.source || 'ШВИДКИЙ ЗАПИТ (ПОП-АП)',
       name: fd.get('name'),
       contact: fd.get('contact'),
+      service: '—', 
       task: fd.get('task')
     };
     submitSecurely(data, this, 'modalNotice');
