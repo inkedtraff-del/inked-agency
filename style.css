@@ -52,7 +52,7 @@ h1, h2, h3 { letter-spacing: -.045em; overflow-wrap: break-word; word-break: bre
 
 .section { padding: 100px 0; border-bottom: 1px solid var(--line); }
 
-/* Уменьшенные шрифты для десктопа (чтобы влезали длинные слова) */
+/* Уменьшенные шрифты для десктопа */
 .section-title { font-size: clamp(38px, 6vw, 82px); line-height: .96; margin: 0 0 26px; font-weight: 800; }
 .lead { font-size: clamp(18px, 1.5vw, 24px); line-height: 1.5; color: #c2c2bb; max-width: 680px; }
 .theme-light .lead { color: #333; }
@@ -255,6 +255,30 @@ h1, h2, h3 { letter-spacing: -.045em; overflow-wrap: break-word; word-break: bre
 .slider-prev { left: 16px; }
 .slider-next { right: 16px; }
 
+/* ДОТЫ ДЛЯ СЛАЙДЕРА */
+.slider-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 10;
+}
+.slider-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2); 
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+.slider-dot.active {
+  background: var(--accent); 
+  transform: scale(1.2); 
+}
+
 /* PROCESS */
 .process { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); }
 .step { padding: 32px 25px; border-right: 1px solid var(--line); }
@@ -382,8 +406,24 @@ footer { padding: 30px 0; color: #666; border-top: 1px solid var(--line); font: 
   .hero-copy .lead { margin-left: 0; margin-right: 0; }
   .btn-row { justify-content: center; }
 
-  .hero-meta { justify-content: center; gap: 25px; text-align: center; }
-  .hero-meta div { flex: unset; }
+  /* ВСЕ 4 БЛОКА СТАТИСТИКИ В ОДИН РЯД НА МОБИЛКЕ */
+  .hero-meta { 
+    justify-content: space-between; 
+    gap: 5px; 
+    text-align: center; 
+    flex-wrap: nowrap; 
+  }
+  .hero-meta div { 
+    flex: 1; 
+    min-width: 0; 
+  }
+  .hero-meta b { 
+    font-size: clamp(16px, 4.5vw, 24px); 
+  }
+  .hero-meta span { 
+    font-size: 8px; 
+    letter-spacing: 0; 
+  }
 
   .process { grid-template-columns: 1fr; }
   .step { border-right: 0 !important; border-bottom: 1px solid var(--line); }
@@ -402,4 +442,9 @@ footer { padding: 30px 0; color: #666; border-top: 1px solid var(--line); font: 
   
   .sticky-bar { padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px)); }
   .sticky-contact { width: 100%; justify-content: center; padding: 14px 24px; font-size: 14px; }
+  
+  /* Прячем стрелки на мобилках, оставляем только свайп и точки */
+  .slider-btn { 
+    display: none; 
+  }
 }

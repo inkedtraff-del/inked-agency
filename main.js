@@ -107,20 +107,85 @@ setLang(savedLang);
     const prev = slider.querySelector('.slider-prev');
     const next = slider.querySelector('.slider-next');
     const slides = slider.querySelectorAll('.slider-slide');
+    const dotsContainer = slider.querySelector('.slider-dots');
     let currentIndex = 0;
 
-    function updateSlider() {
-      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    // 1. Создаем точки в зависимости от количества слайдов
+    if (dotsContainer) {
+      slides.forEach((_, i) => {
+        const dot = document.createElement('div');
+        dot.classList.add('slider-dot');
+        if (i === 0) dot.classList.add('active'); // Первая точка активна
+        dot.addEventListener('click', () => {
+          currentIndex = i;
+          updateSlider();
+        });
+        dotsContainer.appendChild(dot);
+      });
     }
 
-    next.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % slides.length;
-      updateSlider();
-    });
+    const dots = dotsContainer ? dotsContainer.querySelectorAll('.slider-dot') : [];
 
-    prev.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      updateSlider();
+    // 2. Функция обновления визуала
+    function updateSlider() {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      dots.forEach(dot => dot.classList.remove('active'));
+      if (dots[currentIndex]) dots[currentIndex].classList.add('active');
+    }
+
+    // 3. Клики по стрелкам (для десктопа)
+    if (next) {
+      next.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlider();
+      });
+    }
+    if (prev) {
+      prev.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSlider();
+      });
+    }
+
+    // 4. ЛОГИКА СВАЙПОВ ДЛЯ МОБИЛОК (Touch Events)
+    let startX = 0;
+    let currentX = 0;
+    let isDragging = false;
+
+    slider.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      isDragging = true;
+      track.style.transition = 'none'; // Убираем плавность, чтобы картинка липла к пальцу
+    }, {passive: true});
+
+    slider.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      currentX = e.touches[0].clientX;
+      const diff = currentX - startX;
+      // Двигаем слайд вслед за пальцем
+      track.style.transform = `translateX(calc(-${currentIndex * 100}% + ${diff}px))`;
+    }, {passive: true});
+
+    slider.addEventListener('touchend', (e) => {
+      if (!isDragging) return;
+      isDragging = false;
+      track.style.transition = 'transform 0.4s ease-in-out'; // Возвращаем плавную анимацию
+      
+      const diff = currentX - startX;
+      
+      // Если свайпнули больше чем на 40 пикселей — переключаем слайд
+      if (Math.abs(diff) > 40 && currentX !== 0) {
+        if (diff > 0) {
+          // Свайп вправо (назад)
+          currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        } else {
+          // Свайп влево (вперед)
+          currentIndex = (currentIndex + 1) % slides.length;
+        }
+      }
+      
+      updateSlider(); // Примагничиваем слайд на место
+      currentX = 0;   // Сбрасываем значение
     });
   });
 
