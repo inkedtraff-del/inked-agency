@@ -1,0 +1,1035 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="INKED — performance marketing, landing pages and creative systems.">
+  <title>INKED — Performance & Creative Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Подключаем внешние стили -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="is-loading">
+
+<div class="loader" id="loader" aria-label="Loading INKED">
+  <div class="loader-inner">
+    <div class="loader-brand"><span id="typedBrand"></span></div>
+    <div class="loader-progress"><i id="progressBar"></i></div>
+    <div class="loader-meta">
+      <span>Independent creative studio</span>
+      <span id="loadPercent">00%</span>
+    </div>
+  </div>
+</div>
+
+<header class="header" id="header">
+  <div class="header-inner">
+    <a class="logo" href="#top">INK<span>E</span>D.</a>
+    
+    <div style="display: flex; align-items: center;">
+      <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setLang('uk')">UA</button>
+        <button class="lang-btn" onclick="setLang('ru')">RU</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+
+      <nav class="nav">
+        <a href="#cases">
+          <span class="uk">Кейси</span><span class="ru">Кейсы</span><span class="en">Cases</span>
+        </a>
+        <a href="#services">
+          <span class="uk">Послуги</span><span class="ru">Услуги</span><span class="en">Services</span>
+        </a>
+        <a href="#process">
+          <span class="uk">Процес</span><span class="ru">Процесс</span><span class="en">Process</span>
+        </a>
+        <a href="#pricing">
+          <span class="uk">Ціни</span><span class="ru">Цены</span><span class="en">Pricing</span>
+        </a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <button class="btn header-cta" data-open style="margin-left: 15px;">
+        <span class="uk">Почати проєкт</span>
+        <span class="ru">Начать проект</span>
+        <span class="en">Start project</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow mono">
+        <span class="uk">DIGITAL GROWTH СТУДІЯ</span>
+        <span class="ru">DIGITAL GROWTH СТУДИЯ</span>
+        <span class="en">DIGITAL GROWTH STUDIO</span>
+      </span>
+      <h1>
+        <span class="uk">НЕ ПРОСТО<br><span class="accent">РЕКЛАМА.</span><br>СИСТЕМА.</span>
+        <span class="ru">НЕ ПРОСТО<br><span class="accent">РЕКЛАМА.</span><br>СИСТЕМА.</span>
+        <span class="en">NOT JUST<br><span class="accent">ADS.</span><br>A SYSTEM.</span>
+      </h1>
+    </div>
+    <div class="hero-copy">
+      <p class="lead">
+        <span class="uk">Допомагаємо брендам перетворювати трафік на заявки, продажі та зрозумілу економіку — через рекламу, лендінги та креативну систему.</span>
+        <span class="ru">Помогаем брендам превращать трафик в заявки, продажи и понятную экономику — через рекламу, лендинги и креативную систему.</span>
+        <span class="en">We help brands turn traffic into leads, sales, and clear economics through ads, landing pages, and creative systems.</span>
+      </p>
+      <div class="btn-row">
+        <button class="btn" data-open>
+          <span class="uk">Отримати розбір</span>
+          <span class="ru">Получить разбор</span>
+          <span class="en">Get an audit</span>
+        </button>
+        <a class="btn ghost" href="#cases">
+          <span class="uk">Дивитися підхід</span>
+          <span class="ru">Смотреть подход</span>
+          <span class="en">See approach</span>
+        </a>
+      </div>
+      <div class="hero-meta">
+        <div>
+          <b>45+</b>
+          <span>
+            <span class="uk">Проєктів</span>
+            <span class="ru">Проектов</span>
+            <span class="en">Projects</span>
+          </span>
+        </div>
+        <div>
+          <b>$1M+</b>
+          <span>
+            <span class="uk">Бюджетів</span>
+            <span class="ru">Бюджетов</span>
+            <span class="en">Budgets</span>
+          </span>
+        </div>
+        <div>
+          <b>x3</b>
+          <span>
+            <span class="uk">Середній ROAS</span>
+            <span class="ru">Средний ROAS</span>
+            <span class="en">Avg ROAS</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-stamp">Independent marketing studio / 2026</div>
+</section>
+
+<div class="proof">
+  <div class="proof-track">
+    <span class="uk">Beauty-бізнес</span><span class="ru">Beauty-бизнес</span><span class="en">Beauty Business</span>
+    <span class="uk">Тату-студії</span><span class="ru">Тату-студии</span><span class="en">Tattoo Studios</span>
+    <span class="uk">Фітнес-тренери</span><span class="ru">Фитнес-тренеры</span><span class="en">Fitness Trainers</span>
+    <span>E-commerce</span>
+    <span class="uk">Особисті бренди</span><span class="ru">Личные бренды</span><span class="en">Personal Brands</span>
+    <span class="uk">Експерти</span><span class="ru">Эксперты</span><span class="en">Experts</span>
+    <span class="uk">Beauty-бізнес</span><span class="ru">Beauty-бизнес</span><span class="en">Beauty Business</span>
+    <span class="uk">Тату-студії</span><span class="ru">Тату-студии</span><span class="en">Tattoo Studios</span>
+    <span class="uk">Фітнес-тренери</span><span class="ru">Фитнес-тренеры</span><span class="en">Fitness Trainers</span>
+    <span>E-commerce</span>
+    <span class="uk">Особисті бренди</span><span class="ru">Личные бренды</span><span class="en">Personal Brands</span>
+    <span class="uk">Експерти</span><span class="ru">Эксперты</span><span class="en">Experts</span>
+  </div>
+</div>
+
+<!-- БЛОК КЕЙСОВ ТЕПЕРЬ СРАЗУ ПОСЛЕ HERO -->
+<section class="section" id="cases">
+  <div class="container">
+    <span class="eyebrow mono">
+      <span class="uk">01 / Вибрані роботи</span>
+      <span class="ru">01 / Выбранные работы</span>
+      <span class="en">01 / Selected works</span>
+    </span>
+    <h2 class="section-title">
+      <span class="uk">НЕ ОБІЦЯЄМО.<br>ПОКАЗУЄМО.</span>
+      <span class="ru">НЕ ОБЕЩАЕМ.<br>ПОКАЗЫВАЕМ.</span>
+      <span class="en">WE DON'T PROMISE.<br>WE SHOW.</span>
+    </h2>
+    <p class="lead">
+      <span class="uk">Ми не ховаємося за гучними словами. Ось реальні проєкти, цифри та креативні рішення, які генерують дохід.</span>
+      <span class="ru">Мы не прячемся за громкими словами. Вот реальные проекты, цифры и креативные решения, которые генерируют доход.</span>
+      <span class="en">We don't hide behind buzzwords. Here are real projects, metrics, and creative solutions that drive revenue.</span>
+    </p>
+    <div class="cases" style="margin-top:55px">
+      <!-- Блок 1 -->
+      <article class="case">
+        <div class="case-media" style="padding:0;">
+          <div class="slider-container" data-slider="true">
+            <div class="slider-track">
+              <div class="slider-slide"><img src="assets/1.webp" alt="Case 1 image 1"></div>
+              <div class="slider-slide"><img src="assets/2.webp" alt="Case 1 image 2"></div>
+              <div class="slider-slide"><img src="assets/3.webp" alt="Case 1 image 3"></div>
+            </div>
+            <button class="slider-btn slider-prev">❮</button>
+            <button class="slider-btn slider-next">❯</button>
+          </div>
+        </div>
+        <div class="case-body">
+          <span class="case-tag">
+            <span class="uk">Блок 01 / Instagram Visual</span>
+            <span class="ru">Блок 01 / Instagram Visual</span>
+            <span class="en">Block 01 / Instagram Visual</span>
+          </span>
+          <h3>
+            <span class="uk">Упаковка соцмереж</span>
+            <span class="ru">Упаковка соцсетей</span>
+            <span class="en">Social Media Branding</span>
+          </h3>
+          <p class="small">
+            <span class="uk">Розробка унікального стилю стрічки, шрифтової пари та кольорової палітри</span>
+            <span class="ru">Разработка уникального стиля ленты, шрифтовой пары и цветовой палитры</span>
+            <span class="en">Development of a unique feed style, typography, and custom color palette.</span>
+          </p>
+        </div>
+      </article>
+      
+      <!-- Блок 2 -->
+      <article class="case">
+        <div class="case-media" style="padding:0;">
+          <div class="slider-container" data-slider="true">
+            <div class="slider-track">
+              <div class="slider-slide"><img src="assets/4.webp" alt="Case 2 image 1"></div>
+              <div class="slider-slide"><img src="assets/5.webp" alt="Case 2 image 2"></div>
+              <div class="slider-slide"><img src="assets/6.webp" alt="Case 2 image 3"></div>
+            </div>
+            <button class="slider-btn slider-prev">❮</button>
+            <button class="slider-btn slider-next">❯</button>
+          </div>
+        </div>
+        <div class="case-body">
+          <span class="case-tag">
+            <span class="uk">Блок 02 / Брендінг</span>
+            <span class="ru">Блок 02 / Брендинг</span>
+            <span class="en">Block 02 / Branding</span>
+          </span>
+          <h3>
+            <span class="uk">Фірмовий стиль, логотип та брендинг</span>
+            <span class="ru">Фирменный стиль, логотип и брендинг</span>
+            <span class="en">Corporate Identity & Logo Design</span>
+          </h3>
+          <p class="small">
+            <span class="uk">Брендинг який створює унікальну ідентифікацію бренду</span>
+            <span class="ru">Брендинг, создающий уникальную идентификацию бренда</span>
+            <span class="en">Branding that creates a unique and memorable brand identity.</span>
+          </p>
+        </div>
+      </article>
+
+      <!-- Блок 3 -->
+      <article class="case">
+        <div class="case-media" style="padding:0;">
+          <img src="assets/7.webp" alt="Case 3" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div class="case-body">
+          <span class="case-tag">
+            <span class="uk">Блок 03 / Креатив</span>
+            <span class="ru">Блок 03 / Креатив</span>
+            <span class="en">Block 03 / Creative</span>
+          </span>
+          <h3>
+            <span class="uk">Рекламні креативи</span>
+            <span class="ru">Рекламные креативы</span>
+            <span class="en">Ad Creatives</span>
+          </h3>
+          <p class="small">
+            <span class="uk">Висококонверсійні статичні креативи для реклами</span>
+            <span class="ru">Высококонверсионные статические креативы для рекламы</span>
+            <span class="en">High-converting static creatives designed for ad campaigns.</span>
+          </p>
+        </div>
+      </article>
+
+      <!-- Блок 4 -->
+      <article class="case">
+        <div class="case-media" style="padding:0;">
+          <div class="slider-container" data-slider="true">
+            <div class="slider-track">
+              <div class="slider-slide"><img src="assets/8.webp" alt="Case 4 image 1"></div>
+              <div class="slider-slide"><img src="assets/9.webp" alt="Case 4 image 2"></div>
+            </div>
+            <button class="slider-btn slider-prev">❮</button>
+            <button class="slider-btn slider-next">❯</button>
+          </div>
+        </div>
+        <div class="case-body">
+          <span class="case-tag">
+            <span class="uk">Блок 04 / web / UI/UX - дизайн</span>
+            <span class="ru">Блок 04 / web / UI/UX - дизайн</span>
+            <span class="en">Block 04 / Web & UI/UX</span>
+          </span>
+          <h3>
+            <span class="uk">Розробка сайтів для бізнесу</span>
+            <span class="ru">Разработка сайтов для бизнеса</span>
+            <span class="en">Website Development</span>
+          </h3>
+          <p class="small">
+            <span class="uk">Ідеальний формат: розробка → запуск → дохід.</span>
+            <span class="ru">Идеальный формат: разработка → запуск → доход.</span>
+            <span class="en">The perfect format: build → launch → generate revenue.</span>
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section theme-light" id="services">
+  <div class="container">
+    <span class="eyebrow mono">
+      <span class="uk">02 / Що ми робимо</span>
+      <span class="ru">02 / Что мы делаем</span>
+      <span class="en">02 / What we do</span>
+    </span>
+    <h2 class="section-title">
+      <span class="uk">УСЯ ВОРОНКА.<br>В ОДНІЙ СИСТЕМІ.</span>
+      <span class="ru">ВСЯ ВОРОНКА.<br>В ОДНОЙ СИСТЕМЕ.</span>
+      <span class="en">THE FULL FUNNEL.<br>IN ONE SYSTEM.</span>
+    </h2>
+    <p class="lead">
+      <span class="uk">Не продаємо окрему «настройку реклами». Збираємо зв'язку, в якій оффер, креатив, посадка і аналітика працюють на одну бізнес-ціль.</span>
+      <span class="ru">Не продаём отдельную «настройку рекламы». Собираем связку, в которой оффер, креатив, посадочная и аналитика работают на одну бизнес-цель.</span>
+      <span class="en">We don't just sell "ad setup". We build a framework where the offer, creatives, landing page, and analytics all work toward a single business goal.</span>
+    </p>
+    <div class="service-grid" style="margin-top:55px">
+      <article class="service">
+        <div class="service-num">
+          <span class="uk">01 / ПЕРФОРМАНС</span>
+          <span class="ru">01 / ПЕРФОРМАНС</span>
+          <span class="en">01 / PERFORMANCE</span>
+        </div>
+        <div>
+          <h3>
+            <span class="uk">ТРАФІК<br>ІЗ МЕТОЮ.</span>
+            <span class="ru">ТРАФИК<br>С ЦЕЛЬЮ.</span>
+            <span class="en">TRAFFIC<br>WITH PURPOSE.</span>
+          </h3>
+          <ul>
+            <li>
+              <span class="uk">Meta та соцмережі</span>
+              <span class="ru">Meta и соцсети</span>
+              <span class="en">Meta & Social Media</span>
+            </li>
+            <li>
+              <span class="uk">Структура кампаній</span>
+              <span class="ru">Структура кампаний</span>
+              <span class="en">Campaign Structure</span>
+            </li>
+            <li>
+              <span class="uk">Тестування зв'язок</span>
+              <span class="ru">Тестирование связок</span>
+              <span class="en">Testing Combinations</span>
+            </li>
+            <li>
+              <span class="uk">Масштабування переможців</span>
+              <span class="ru">Масштабирование победителей</span>
+              <span class="en">Scaling Winners</span>
+            </li>
+          </ul>
+        </div>
+      </article>
+      <article class="service">
+        <div class="service-num">
+          <span class="uk">02 / ВЕБ</span>
+          <span class="ru">02 / ВЕБ</span>
+          <span class="en">02 / WEB</span>
+        </div>
+        <div>
+          <h3>
+            <span class="uk">СТОРІНКИ, ЩО<br>ВІДПОВІДАЮТЬ.</span>
+            <span class="ru">СТРАНИЦЫ,<br>КОТОРЫЕ ОТВЕЧАЮТ.</span>
+            <span class="en">PAGES THAT<br>CONVERT.</span>
+          </h3>
+          <ul>
+            <li>
+              <span class="uk">Лендінги та сайти</span>
+              <span class="ru">Лендинги и сайты</span>
+              <span class="en">Landing Pages & Sites</span>
+            </li>
+            <li>
+              <span class="uk">UX та архітектура</span>
+              <span class="ru">UX и архитектура</span>
+              <span class="en">UX & Architecture</span>
+            </li>
+            <li>
+              <span class="uk">Mobile-first архітектура</span>
+              <span class="ru">Mobile-first архитектура</span>
+              <span class="en">Mobile-first Design</span>
+            </li>
+            <li>
+              <span class="uk">Готовність до аналітики</span>
+              <span class="ru">Готовность к аналитике</span>
+              <span class="en">Analytics Ready</span>
+            </li>
+          </ul>
+        </div>
+      </article>
+      <article class="service">
+        <div class="service-num">
+          <span class="uk">03 / КРЕАТИВ</span>
+          <span class="ru">03 / КРЕАТИВ</span>
+          <span class="en">03 / CREATIVE</span>
+        </div>
+        <div>
+          <h3>
+            <span class="uk">КРЕАТИВИ, ЩО<br>ЧІПЛЯЮТЬ.</span>
+            <span class="ru">КРЕАТИВЫ, КОТОРЫЕ<br>ЦЕПЛЯЮТ.</span>
+            <span class="en">CREATIVES THAT<br>HOOK.</span>
+          </h3>
+          <ul>
+            <li>
+              <span class="uk">UGC / статика / моушн</span>
+              <span class="ru">UGC / статика / моушн</span>
+              <span class="en">UGC / Static / Motion</span>
+            </li>
+            <li>
+              <span class="uk">Хуки та кути подачі</span>
+              <span class="ru">Хуки и углы подачи</span>
+              <span class="en">Hooks & Angles</span>
+            </li>
+            <li>
+              <span class="uk">Система тестування</span>
+              <span class="ru">Система тестирования</span>
+              <span class="en">Testing System</span>
+            </li>
+            <li>
+              <span class="uk">Візуальний напрямок</span>
+              <span class="ru">Визуальное направление</span>
+              <span class="en">Visual Direction</span>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container outcome-grid">
+    <div>
+      <span class="eyebrow mono">
+        <span class="uk">03 / Чому INKED</span>
+        <span class="ru">03 / Почему INKED</span>
+        <span class="en">03 / Why INKED</span>
+      </span>
+      <h2 class="section-title">
+        <span class="uk">СПОЧАТКУ<br>ЕКОНОМІКА.<br>ПОТІМ<br>ЕФЕКТИ.</span>
+        <span class="ru">СНАЧАЛА<br>ЭКОНОМИКА.<br>ПОТОМ<br>ЭФФЕКТЫ.</span>
+        <span class="en">ECONOMICS<br>FIRST.<br>EFFECTS<br>LATER.</span>
+      </h2>
+    </div>
+    <div class="outcome-list">
+      <article class="outcome">
+        <div class="outcome-num">01</div>
+        <div>
+          <h3>
+            <span class="uk">Один головний KPI</span>
+            <span class="ru">Один главный KPI</span>
+            <span class="en">One primary KPI</span>
+          </h3>
+          <p>
+            <span class="uk">До запуску фіксуємо, що саме вважаємо успіхом: лід, продаж, CAC, ROAS, вартість заявки.</span>
+            <span class="ru">До запуска фиксируем, что именно считаем успехом: лид, продажу, CAC, ROAS, стоимость заявки.</span>
+            <span class="en">Before launching, we define what success means: leads, sales, CAC, ROAS, or cost per application.</span>
+          </p>
+        </div>
+      </article>
+      <article class="outcome">
+        <div class="outcome-num">02</div>
+        <div>
+          <h3>
+            <span class="uk">Тестуємо гіпотези, а не картинки</span>
+            <span class="ru">Тестируем гипотезы, а не картинки</span>
+            <span class="en">We test hypotheses, not images</span>
+          </h3>
+          <p>
+            <span class="uk">Розділяємо хук, оффер, візуал та CTA, щоб розуміти, чому зв'язка працює.</span>
+            <span class="ru">Разделяем хук, оффер, визуал и CTA, чтобы понимать, почему связка работает.</span>
+            <span class="en">We separate the hook, offer, visuals, and CTA to understand exactly why a combination works.</span>
+          </p>
+        </div>
+      </article>
+      <article class="outcome">
+        <div class="outcome-num">03</div>
+        <div>
+          <h3>
+            <span class="uk">Прибираємо зайве</span>
+            <span class="ru">Убираем лишнее</span>
+            <span class="en">Removing the unnecessary</span>
+          </h3>
+          <p>
+            <span class="uk">Чим вищий намір користувача, тим менше йому потрібно пояснювати. Сторінка веде до однієї дії.</span>
+            <span class="ru">Чем выше намерение пользователя, тем меньше ему нужно объяснять. Страница ведет к одному действию.</span>
+            <span class="en">The higher the user intent, the less explanation they need. The page drives a single, clear action.</span>
+          </p>
+        </div>
+      </article>
+      <article class="outcome">
+        <div class="outcome-num">04</div>
+        <div>
+          <h3>
+            <span class="uk">Будуємо докази</span>
+            <span class="ru">Строим доказательства</span>
+            <span class="en">Building evidence</span>
+          </h3>
+          <p>
+            <span class="uk">Кейси, результати та артефакти розташовуються поруч із точками прийняття рішення.</span>
+            <span class="ru">Кейсы, результаты и артефакты располагаются рядом с точками принятия решения.</span>
+            <span class="en">Cases, results, and artifacts are strategically placed near key decision-making points.</span>
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section theme-light" id="process">
+  <div class="container">
+    <span class="eyebrow mono">
+      <span class="uk">04 / Процес</span>
+      <span class="ru">04 / Процесс</span>
+      <span class="en">04 / Process</span>
+    </span>
+    <h2 class="section-title">
+      <span class="uk">ЩО ВІДБУВАЄТЬСЯ<br>ПІСЛЯ "ТАК".</span>
+      <span class="ru">ЧТО ПРОИСХОДИТ<br>ПОСЛЕ "ДА".</span>
+      <span class="en">WHAT HAPPENS<br>AFTER "YES".</span>
+    </h2>
+    <div class="process" style="margin-top:50px">
+      <article class="step">
+        <span class="step-num">
+          <span class="uk">01 / АУДИТ</span>
+          <span class="ru">01 / АУДИТ</span>
+          <span class="en">01 / AUDIT</span>
+        </span>
+        <h3>
+          <span class="uk">Розбираємо</span>
+          <span class="ru">Разбираем</span>
+          <span class="en">Deconstruct</span>
+        </h3>
+        <p>
+          <span class="uk">Продукт, аудиторію, поточну рекламу, економіку та точки втрати конверсії.</span>
+          <span class="ru">Продукт, аудиторию, текущую рекламу, экономику и точки потери конверсии.</span>
+          <span class="en">The product, audience, current ads, economics, and conversion drop-off points.</span>
+        </p>
+      </article>
+      <article class="step">
+        <span class="step-num">
+          <span class="uk">02 / СТРАТЕГІЯ</span>
+          <span class="ru">02 / СТРАТЕГИЯ</span>
+          <span class="en">02 / STRATEGY</span>
+        </span>
+        <h3>
+          <span class="uk">Збираємо</span>
+          <span class="ru">Собираем</span>
+          <span class="en">Assemble</span>
+        </h3>
+        <p>
+          <span class="uk">Оффер, ієрархію повідомлень, креативні кути, структуру лендінгу та план тестів.</span>
+          <span class="ru">Оффер, иерархию сообщений, креативные углы, структуру лендинга и план тестов.</span>
+          <span class="en">The offer, message hierarchy, creative angles, landing page structure, and testing plan.</span>
+        </p>
+      </article>
+      <article class="step">
+        <span class="step-num">
+          <span class="uk">03 / ЗАПУСК</span>
+          <span class="ru">03 / ЗАПУСК</span>
+          <span class="en">03 / LAUNCH</span>
+        </span>
+        <h3>
+          <span class="uk">Запускаємо</span>
+          <span class="ru">Запускаем</span>
+          <span class="en">Execute</span>
+        </h3>
+        <p>
+          <span class="uk">Креативи, сторінки, кампанії, події аналітики та перший цикл тестування.</span>
+          <span class="ru">Креативы, страницы, кампании, события аналитики и первый цикл тестирования.</span>
+          <span class="en">Creatives, pages, campaigns, analytics events, and the first cycle of testing.</span>
+        </p>
+      </article>
+      <article class="step">
+        <span class="step-num">
+          <span class="uk">04 / МАСШТАБ</span>
+          <span class="ru">04 / МАСШТАБ</span>
+          <span class="en">04 / SCALE</span>
+        </span>
+        <h3>
+          <span class="uk">Посилюємо</span>
+          <span class="ru">Усиливаем</span>
+          <span class="en">Amplify</span>
+        </h3>
+        <p>
+          <span class="uk">Залишаємо переможців, шукаємо нові кути і масштабуємо те, що витримує цифри.</span>
+          <span class="ru">Оставляем победителей, ищем новые углы и масштабируем то, что выдерживает цифры.</span>
+          <span class="en">Keep the winners, test new angles, and scale what withstands the target metrics.</span>
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <div class="container">
+    <span class="eyebrow mono">
+      <span class="uk">05 / Ціноутворення</span>
+      <span class="ru">05 / Ценообразование</span>
+      <span class="en">05 / Pricing</span>
+    </span>
+    <h2 class="section-title">
+      <span class="uk">ТРИ РІВНІ.<br>ОДНА ЦІЛЬ.</span>
+      <span class="ru">ТРИ УРОВНЯ.<br>ОДНА ЦЕЛЬ.</span>
+      <span class="en">THREE TIERS.<br>ONE GOAL.</span>
+    </h2>
+    <p class="lead">
+      <span class="uk">Стартова міжнародна сітка. Перед публікацією підставте ваші реальні обсяги, терміни та умови.</span>
+      <span class="ru">Стартовая международная сетка. Перед публикацией подставьте ваши реальные объемы, сроки и условия.</span>
+      <span class="en">Starting international pricing grid. Choose the level that matches your current growth stage.</span>
+    </p>
+    <div class="pricing" style="margin-top:55px">
+      <article class="price-card">
+        <span class="price-name">
+          <span class="uk">01 / Запуск</span>
+          <span class="ru">01 / Запуск</span>
+          <span class="en">01 / Launch</span>
+        </span>
+        <div class="price">
+          <span class="uk">від $500</span>
+          <span class="ru">от $500</span>
+          <span class="en">$500+</span>
+          <small>
+            <span class="uk">/ проєкт</span>
+            <span class="ru">/ проект</span>
+            <span class="en">/ project</span>
+          </small>
+        </div>
+        <p class="price-sub">
+          <span class="uk">Для бізнесу, якому потрібно швидко привести до ладу основу і запустити перший тест.</span>
+          <span class="ru">Для бизнеса, которому нужно быстро привести в порядок основу и запустить первый тест.</span>
+          <span class="en">For businesses that need to quickly set up their foundation and launch an initial test.</span>
+        </p>
+        <ul class="price-list">
+          <li>
+            <span class="uk">Стратегічний дзвінок + аудит</span>
+            <span class="ru">Стратегический звонок + аудит</span>
+            <span class="en">Strategy call & audit</span>
+          </li>
+          <li>
+            <span class="uk">Оффер та структура воронки</span>
+            <span class="ru">Оффер и структура воронки</span>
+            <span class="en">Offer & funnel structure</span>
+          </li>
+          <li>
+            <span class="uk">1 концепт лендінгу</span>
+            <span class="ru">1 концепт лендинга</span>
+            <span class="en">1 landing page concept</span>
+          </li>
+          <li>
+            <span class="uk">Креативний напрямок</span>
+            <span class="ru">Креативное направление</span>
+            <span class="en">Creative direction</span>
+          </li>
+          <li>
+            <span class="uk">Базова аналітика</span>
+            <span class="ru">Базовая аналитика</span>
+            <span class="en">Basic analytics</span>
+          </li>
+          <li>
+            <span class="uk">7–10 днів</span>
+            <span class="ru">7–10 дней</span>
+            <span class="en">7–10 days</span>
+          </li>
+        </ul>
+        <button class="btn" data-plan="Launch">
+          <span class="uk">Обговорити пакет</span>
+          <span class="ru">Обсудить пакет</span>
+          <span class="en">Discuss Plan</span>
+        </button>
+        <div class="price-note">
+          <span class="uk">Разовий платіж / рекламний бюджет не включено</span>
+          <span class="ru">Разовый платеж / рекламный бюджет не включен</span>
+          <span class="en">One-time payment / ad spend not included</span>
+        </div>
+      </article>
+      
+      <article class="price-card featured">
+        <span class="price-badge">
+          <span class="uk">Найпопулярніший</span>
+          <span class="ru">Самый популярный</span>
+          <span class="en">Most Popular</span>
+        </span>
+        <span class="price-name">
+          <span class="uk">02 / Зростання</span>
+          <span class="ru">02 / Рост</span>
+          <span class="en">02 / Growth</span>
+        </span>
+        <div class="price">
+          <span class="uk">від $1000</span>
+          <span class="ru">от $1000</span>
+          <span class="en">$1000+</span>
+          <small>
+            <span class="uk">/ місяць</span>
+            <span class="ru">/ месяц</span>
+            <span class="en">/ month</span>
+          </small>
+        </div>
+        <p class="price-sub">
+          <span class="uk">Для бренду, якому потрібна регулярна робота з рекламою, креативами та конверсією.</span>
+          <span class="ru">Для бренда, которому нужна регулярная работа с рекламой, креативами и конверсией.</span>
+          <span class="en">For brands requiring ongoing optimization of ads, creatives, and conversion rates.</span>
+        </p>
+        <ul class="price-list">
+          <li>
+            <span class="uk">Повна стратегія воронки</span>
+            <span class="ru">Полная стратегия воронки</span>
+            <span class="en">Full funnel strategy</span>
+          </li>
+          <li>
+            <span class="uk">Лендінг + CRO ітерації</span>
+            <span class="ru">Лендинг + CRO итерации</span>
+            <span class="en">Landing page & CRO iterations</span>
+          </li>
+          <li>
+            <span class="uk">Система тестування креативів</span>
+            <span class="ru">Система тестирования креативов</span>
+            <span class="en">Creative testing system</span>
+          </li>
+          <li>
+            <span class="uk">Ведення реклами</span>
+            <span class="ru">Ведение рекламы</span>
+            <span class="en">Ad management</span>
+          </li>
+          <li>
+            <span class="uk">Щотижневий огляд показників</span>
+            <span class="ru">Еженедельный обзор показателей</span>
+            <span class="en">Weekly performance review</span>
+          </li>
+          <li>
+            <span class="uk">Щомісячний план зростання</span>
+            <span class="ru">Ежемесячный план роста</span>
+            <span class="en">Monthly growth plan</span>
+          </li>
+        </ul>
+        <button class="btn" data-plan="Growth">
+          <span class="uk">Обговорити пакет</span>
+          <span class="ru">Обсудить пакет</span>
+          <span class="en">Discuss Plan</span>
+        </button>
+        <div class="price-note">
+          <span class="uk">Щомісячно / рекламний бюджет не включено</span>
+          <span class="ru">Ежемесячно / рекламный бюджет не включен</span>
+          <span class="en">Monthly retainer / ad spend not included</span>
+        </div>
+      </article>
+      
+      <article class="price-card">
+        <span class="price-name">
+          <span class="uk">03 / Масштаб</span>
+          <span class="ru">03 / Масштаб</span>
+          <span class="en">03 / Scale</span>
+        </span>
+        <div class="price">
+          <span class="uk">від $1500</span>
+          <span class="ru">от $1500</span>
+          <span class="en">$1500+</span>
+          <small>
+            <span class="uk">/ місяць</span>
+            <span class="ru">/ месяц</span>
+            <span class="en">/ month</span>
+          </small>
+        </div>
+        <p class="price-sub">
+          <span class="uk">Для команд, яким потрібна повноцінна growth-функція на боці агентства.</span>
+          <span class="ru">Для команд, которым нужна полноценная growth-функция на стороне агентства.</span>
+          <span class="en">For teams needing an external powerhouse growth department.</span>
+        </p>
+        <ul class="price-list">
+          <li>
+            <span class="uk">Все з пакету Зростання</span>
+            <span class="ru">Всё из пакета Рост</span>
+            <span class="en">Everything in Growth</span>
+          </li>
+          <li>
+            <span class="uk">Декілька воронок / ринків</span>
+            <span class="ru">Несколько воронок / рынков</span>
+            <span class="en">Multiple funnels & markets</span>
+          </li>
+          <li>
+            <span class="uk">Масштабне тестування креативів</span>
+            <span class="ru">Масштабное тестирование креативов</span>
+            <span class="en">At-scale creative testing</span>
+          </li>
+          <li>
+            <span class="uk">Глибока аналітика</span>
+            <span class="ru">Глубокая аналитика</span>
+            <span class="en">Deep dive analytics</span>
+          </li>
+          <li>
+            <span class="uk">Стратегія та звітність</span>
+            <span class="ru">Стратегия и отчетность</span>
+            <span class="en">Advanced strategy & reporting</span>
+          </li>
+          <li>
+            <span class="uk">Пріоритетний продакшн</span>
+            <span class="ru">Приоритетный продакшн</span>
+            <span class="en">Priority production support</span>
+          </li>
+        </ul>
+        <button class="btn" data-plan="Scale">
+          <span class="uk">Обговорити пакет</span>
+          <span class="ru">Обсудить пакет</span>
+          <span class="en">Discuss Plan</span>
+        </button>
+        <div class="price-note">
+          <span class="uk">Щомісячно / рекламний бюджет не включено</span>
+          <span class="ru">Ежемесячно / рекламный бюджет не включен</span>
+          <span class="en">Monthly retainer / ad spend not included</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <span class="eyebrow mono">06 / FAQ</span>
+    <h2 class="section-title">
+      <span class="uk">ПИТАННЯ,<br>ЯКІ ПОСТАВЛЯТЬ.</span>
+      <span class="ru">ВОПРОСЫ,<br>КОТОРЫЕ ЗАДАДУТ.</span>
+      <span class="en">QUESTIONS<br>YOU MIGHT ASK.</span>
+    </h2>
+    <div class="faq" style="margin-top:50px">
+      <details>
+        <summary>
+          <span class="uk">Можна почати тільки з реклами?</span>
+          <span class="ru">Можно начать только с рекламы?</span>
+          <span class="en">Can we start with just ads?</span>
+        </summary>
+        <p>
+          <span class="uk">Так. На старті визначаємо мінімальний набір робіт для чесного тесту. Якщо сторінка обмежує результат, це покажемо окремо.</span>
+          <span class="ru">Да. На старте определяем минимальный набор работ для честного теста. Если страница ограничивает результат, это покажем отдельно.</span>
+          <span class="en">Yes. At the start, we determine the minimal setup for a fair test. If your current landing page limits results, we'll notify you separately.</span>
+        </p>
+      </details>
+      <details>
+        <summary>
+          <span class="uk">Ви працюєте з міжнародними ринками?</span>
+          <span class="ru">Вы работаете с международными рынками?</span>
+          <span class="en">Do you work with international markets?</span>
+        </summary>
+        <p>
+          <span class="uk">Так. У цьому шаблоні передбачена міжнародна цінова сітка. Географія, мова і обсяг фіксуються на старті.</span>
+          <span class="ru">Да. В этом шаблоне предусмотрена международная ценовая сетка. География, язык и объем фиксируются на старте.</span>
+          <span class="en">Yes. We accommodate international campaigns. Geographies, languages, and volumes are established at the beginning of the project.</span>
+        </p>
+      </details>
+      <details>
+        <summary>
+          <span class="uk">Рекламний бюджет входить у вартість?</span>
+          <span class="ru">Рекламный бюджет входит в стоимость?</span>
+          <span class="en">Is ad spend included in the pricing?</span>
+        </summary>
+        <p>
+          <span class="uk">Ні. Зазначені ціни — вартість нашої роботи. Бюджет оплачується окремо платформі.</span>
+          <span class="ru">Нет. Указанные цены — стоимость нашей работы. Бюджет оплачивается отдельно платформе.</span>
+          <span class="en">No. The prices listed reflect our service fee. Ad budget is billed and paid directly to the advertising platforms.</span>
+        </p>
+      </details>
+      <details>
+        <summary>
+          <span class="uk">Який мінімальний бюджет на рекламу?</span>
+          <span class="ru">Какой минимальный бюджет на рекламу?</span>
+          <span class="en">What is the minimum ad budget?</span>
+        </summary>
+        <p>
+          <span class="uk">Залежить від ринку та продукту. Замість універсальної цифри розраховуємо бюджет після аудиту.</span>
+          <span class="ru">Зависит от рынка и продукта. Вместо универсальной цифры рассчитываем бюджет после аудита.</span>
+          <span class="en">It depends heavily on the market and the product. We calculate recommended budgets post-audit instead of giving arbitrary figures.</span>
+        </p>
+      </details>
+      <details>
+        <summary>
+          <span class="uk">Можна замовити тільки сайт?</span>
+          <span class="ru">Можно заказать только сайт?</span>
+          <span class="en">Can I just order a website?</span>
+        </summary>
+        <p>
+          <span class="uk">Так, але ми рекомендуємо хоча б перевірити оффер і шлях користувача, щоб дизайн не був відірваний від конверсії.</span>
+          <span class="ru">Да, но мы рекомендуем хотя бы проверить оффер и путь пользователя, чтобы дизайн не был оторван от конверсии.</span>
+          <span class="en">Yes, but we strongly suggest evaluating the offer and user journey so the design is not detached from conversion principles.</span>
+        </p>
+      </details>
+      <details>
+        <summary>
+          <span class="uk">Як швидко можна стартувати?</span>
+          <span class="ru">Как быстро можно стартовать?</span>
+          <span class="en">How fast can we launch?</span>
+        </summary>
+        <p>
+          <span class="uk">Після брифа фіксуємо терміни. Для простого проєкту можна використати короткий спринт, для системи — поетапний запуск.</span>
+          <span class="ru">После брифа фиксируем сроки. Для простого проекта можно использовать короткий спринт, для системы — поэтапный запуск.</span>
+          <span class="en">Once briefed, we lock down the timeline. We can execute a fast sprint for simple setups or a phased launch for comprehensive systems.</span>
+        </p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="contact">
+  <div class="container final-grid">
+    <div>
+      <span class="eyebrow mono">
+        <span class="uk">07 / Почати проєкт</span>
+        <span class="ru">07 / Начать проект</span>
+        <span class="en">07 / Start a project</span>
+      </span>
+      <h2>
+        <span class="uk"><span style="color: #fff;">Є ЗАДАЧА?</span><br><span class="accent">ПОГОВОРИМО.</span></span>
+        <span class="ru"><span style="color: #fff;">ЕСТЬ ЗАДАЧА?</span><br><span class="accent">ПОГОВОРИМ.</span></span>
+        <span class="en"><span style="color: #fff;">HAVE A TASK?</span><br><span class="accent">LET'S TALK.</span></span>
+      </h2>
+      <p class="lead" style="margin-top:30px">
+        <span class="uk">Залишіть контакти — відповімо з первинною оцінкою. Або напишіть напряму в Telegram.</span>
+        <span class="ru">Оставьте контакты — ответим с первичной оценкой. Или напишите напрямую в Telegram.</span>
+        <span class="en">Leave your details and we'll reply with an initial estimate. Or message us directly on Telegram.</span>
+      </p>
+    </div>
+    <div class="contact-box">
+      <h3>
+        <span class="uk">Запросити розбір</span>
+        <span class="ru">Запросить разбор</span>
+        <span class="en">Request an audit</span>
+      </h3>
+      <p class="small">
+        <span class="uk">2 хвилини на заповнення. Жодного спаму.</span>
+        <span class="ru">2 минуты на заполнение. Никакого спама.</span>
+        <span class="en">Takes 2 minutes. Absolutely no spam.</span>
+      </p>
+      
+      <form class="form" id="leadForm">
+        <input name="name" placeholder="Name / Имя" required>
+        <input name="contact" placeholder="Telegram / WhatsApp / Email" required>
+        
+        <select name="service">
+          <option value="" class="uk" disabled selected>Оберіть послугу</option>
+          <option value="" class="ru" disabled selected>Выберите услугу</option>
+          <option value="" class="en" disabled selected>Select service</option>
+          
+          <option class="uk">Перформанс маркетинг</option>
+          <option class="ru">Перформанс маркетинг</option>
+          <option class="en">Performance Marketing</option>
+          
+          <option class="uk">Лендінги та сайти</option>
+          <option class="ru">Лендинги и сайты</option>
+          <option class="en">Landing Pages & Sites</option>
+          
+          <option class="uk">Креативна система</option>
+          <option class="ru">Креативная система</option>
+          <option class="en">Creative Systems</option>
+          
+          <option class="uk">Повна воронка</option>
+          <option class="ru">Полная воронка</option>
+          <option class="en">Full Funnel</option>
+        </select>
+        
+        <textarea name="task" placeholder="Task / Задача"></textarea>
+        
+        <button class="btn" type="submit" style="width: 100%; justify-content: center; margin-top: 10px;">
+          <span class="uk">Відправити запит</span>
+          <span class="ru">Отправить запрос</span>
+          <span class="en">Send Request</span>
+        </button>
+        
+        <a href="https://t.me/wakaritoyama" target="_blank" rel="noopener" class="btn btn-accent" style="width: 100%; justify-content: center; margin-top: 10px;">
+          <span class="uk">Написати в Telegram</span>
+          <span class="ru">Написать в Telegram</span>
+          <span class="en">Message on Telegram</span>
+        </a>
+        
+        <div style="margin-top: 15px; text-align: center;">
+          <a href="mailto:hello@yourdomain.com" style="font: 12px var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em;">Email us</a>
+        </div>
+        
+        <div class="notice" id="notice">
+          <!-- Текст будет меняться через JS -->
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>INKED. / Performance &amp; Creative Studio</span>
+    <span>© 2026 / All rights reserved</span>
+    <a href="#top">Back to top</a>
+  </div>
+</footer>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-card">
+    <div class="modal-body">
+      <button class="close" id="close" aria-label="Close">×</button>
+      <span class="eyebrow mono">
+        <span class="uk">Project intake</span><span class="ru">Project intake</span><span class="en">Project intake</span>
+      </span>
+      <h3>
+        <span class="uk">Давайте розберемо задачу.</span>
+        <span class="ru">Давайте разберем задачу.</span>
+        <span class="en">Let's unpack the task.</span>
+      </h3>
+      <p class="small">
+        <span class="uk">Залишіть контакт. Ми повернемося з питаннями по продукту, ринку та цілі.</span>
+        <span class="ru">Оставьте контакт. Мы вернемся с вопросами по продукту, рынку и цели.</span>
+        <span class="en">Leave your contact. We'll get back with queries regarding your product, market, and goals.</span>
+      </p>
+      
+      <form class="form" id="modalForm">
+        <input name="name" placeholder="Name / Имя" required>
+        <input name="contact" placeholder="Telegram / WhatsApp / Email" required>
+        <textarea name="task" placeholder="Task / Задача"></textarea>
+        
+        <button class="btn" type="submit" style="width: 100%; justify-content: center; margin-top: 10px;">
+          <span class="uk">Відправити</span>
+          <span class="ru">Отправить</span>
+          <span class="en">Submit</span>
+        </button>
+        
+        <a href="https://t.me/wakaritoyama" target="_blank" rel="noopener" class="btn btn-accent" style="width: 100%; justify-content: center; margin-top: 10px;">
+          <span class="uk">Написати в Telegram</span>
+          <span class="ru">Написать в Telegram</span>
+          <span class="en">Message on Telegram</span>
+        </a>
+        
+        <div class="notice" id="modalNotice">
+          <!-- Текст будет меняться через JS -->
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- НИЖНЯЯ ПАНЕЛЬ С КНОПКОЙ -->
+<div class="sticky-bar">
+  <a href="https://t.me/wakaritoyama" target="_blank" rel="noopener" class="sticky-contact">
+    <span class="uk">Зв'язатися з нами</span>
+    <span class="ru">Связаться с нами</span>
+    <span class="en">Contact us</span>
+  </a>
+</div>
+
+<!-- Подключаем внешний JavaScript -->
+<script src="main.js"></script>
+
+</body>
+</html>
