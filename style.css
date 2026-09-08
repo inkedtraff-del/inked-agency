@@ -18,7 +18,7 @@ html[lang="en"] .uk, html[lang="en"] .ru { display: none !important; }
   --line: rgba(0, 0, 0, 0.12);
   --muted: #555550;
   --soft: rgba(0, 0, 0, 0.04);
-  --accent: #00b34a; 
+  --accent: #8c8c85; 
 }
 
 * { box-sizing: border-box; }
