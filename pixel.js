@@ -1,5 +1,5 @@
 // Впиши сюда свой реальный ID пикселя Meta
-const PIXEL_ID = 'ТВОЙ_ПИКСЕЛЬ_ID'; 
+const PIXEL_ID = '974420555696388'; 
 
 // 1. Базовая инициализация Meta Pixel
 !function(f,b,e,v,n,t,s)
@@ -11,7 +11,7 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', PIXEL_ID);
+fbq('init', 974420555696388);
 
 // Отстреливаем базовый просмотр страницы
 fbq('track', 'PageView'); 
